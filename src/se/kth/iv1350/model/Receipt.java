@@ -19,20 +19,13 @@ public class Receipt {
         this.payment = payment;
     }
 
-    /**
-     *  Utility method to append a line to the StringBuilder
-     * @param builder
-     * @param line 
-     */
+   
     private void appendLine(StringBuilder builder, String line) {
         builder.append(line);
         builder.append("\n");
     }
 
-    /** 
-     * Utility method to end a section in the StringBuilder
-     * @param builder
-     */
+    
     private void endSection(StringBuilder builder) {
         builder.append("\n");
     }

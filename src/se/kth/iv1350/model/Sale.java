@@ -50,35 +50,19 @@ public class Sale {
         updateRunningTotal(item.getItemDescription().getPrice(), quantity, item.getItemDescription().getVAT());
     }
 
-    /**
-    Adds the VAT for an item to the added VAT and updates the sale information. 
-    @param VAT The VAT for the item.
-    @param quantity The quantity of the item.
-    @param price The price of the item.
-    */
+   
     private void addVAT(double VAT, double quantity, double price){  
         this.addedVAT += (VAT*price)*quantity;
         this.saleInfo = new SaleDTO(this.dateAndTime, this.runningTotal, this.addedVAT, this.items); 
     }
 
-    /**
-    Updates the running total for the sale and updates the sale information.
-    @param price The price of the item.
-    @param quantity The quantity of the item.
-    @param VAT The VAT for the item.
-    */
+    
     private void updateRunningTotal(double price, double quantity, double VAT){
         this.runningTotal += (price + (price * VAT)) * quantity;
         this.saleInfo = new SaleDTO(this.dateAndTime, this.runningTotal, this.addedVAT, this.items); 
     }
 
-    /**
-    * Checks if an item already exists in the list of items for the sale.
-    If it does, adds the quantity to the existing item's quantity and updates the sale information.
-    If it doesn't, adds the item to the list of items and sets the item's quantity to the quantity, and updates the sale information.
-    @param item The item to check.
-    @param quantity The quantity of the item.
-    */
+   
     private void isSameItem(Item item, double quantity) {
         boolean correctItem = false;
         for (Item duplicate : items) {
