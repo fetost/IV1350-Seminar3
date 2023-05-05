@@ -6,9 +6,9 @@ package se.kth.iv1350.model;
  */
 public class Payment {
     
-    private double paidAmount; // The amount paid by the customer.
-    private double runningTotal; // The running total of the sale.
-    private double change; // The change to be returned to the customer.
+    private double paidAmount; 
+    private double runningTotal; 
+    private double change; 
 
     /**
      Creates a new instance of Payment with the specified paid amount and running total.

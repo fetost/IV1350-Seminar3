@@ -44,17 +44,17 @@ public class Receipt {
     public String createReceipt() {
         StringBuilder builder = new StringBuilder();
 
-        // Append store name
+       
         appendLine(builder, "Royan and Pjotr livs");
         endSection(builder);
 
         LocalDateTime timeOfSale = LocalDateTime.now();
-        // Append current time
+        
         builder.append("Current time: ");
         appendLine(builder, timeOfSale.toString());
         endSection(builder);
     
-        // Append items and their prices
+        
         builder.append("Purchased items: ");
         builder.append("\n");
     
@@ -65,31 +65,31 @@ public class Receipt {
 
         builder.append("\n");
 
-        // Append running total
+       
         builder.append("Running Total: " + Math.round(sale.getSaleInfo().getRunningTotal()));
         builder.append("\n");
 
         builder.append("\n");
 
-        // Append added VAT
+       
         builder.append("Total VAT: " + sale.getSaleInfo().getAddedVAT());
         builder.append("\n");
     
         builder.append("\n");
 
-        // Append amount paid
+      
         builder.append("Amount Paid: " + Math.round(payment.getPaidAmount())); 
         builder.append("\n");
 
         builder.append("\n");
 
-        // Append change returned
+        
         builder.append("Change returned: " + Math.round(payment.getChange()));  
         builder.append("\n");
 
         endSection(builder);
 
-        // Return the receipt as a String
+       
         return builder.toString();
     }
 }

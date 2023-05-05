@@ -4,10 +4,10 @@ package se.kth.iv1350.integration;
   * This class represents an item with its corresponding item description, item identifier, quantity and store quantity.
   */
  public class Item {
-    private ItemDescription itemDescription; // The description of the item.
-    private int itemIdentifier; // The unique identifier of the item.
-    private double quantity; // The quantity of the item.
-    private double storeQuantity; // The quantity of the item in the store.
+    private ItemDescription itemDescription; 
+    private int itemIdentifier; 
+    private double quantity; 
+    private double storeQuantity; 
 
     /**
     *The constructor for the item.
@@ -16,7 +16,7 @@ package se.kth.iv1350.integration;
         this.itemIdentifier = itemIdentifier;
         this.storeQuantity = storeQuantity;
         this.itemDescription = itemDescription;
-        quantity = 0;  // The quantity is initialized to 0.
+        quantity = 0;  
     }
     /**
      *Getter method to get the item identifier.

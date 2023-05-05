@@ -5,7 +5,7 @@ import java.util.*;
 import se.kth.iv1350.integration.*;
 
 public class Sale {
-    // Fields for the sale class
+   
     private LocalDateTime dateAndTime;  
     private List<Item> items;
     private SaleDTO saleInfo;
